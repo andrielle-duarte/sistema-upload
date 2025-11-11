@@ -1,0 +1,12 @@
+img {
+    width: 300px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 90px;
+  border-bottom: 1px solid forestgreen;
+  width: 100%;
+  padding: 0 20px;
+}

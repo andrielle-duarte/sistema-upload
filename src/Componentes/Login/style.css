@@ -1,0 +1,76 @@
+body, html {
+  background: linear-gradient(120deg, #ecf8f2 0%, #ffffff 100%);
+  min-height: 100vh;
+}
+
+.containerLogin {
+  min-height: 80vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px 0 rgba(50,90,60,0.10);
+  padding: 36px 28px 34px 28px;
+  min-width: 320px;
+  max-width: 410px;
+  width: 100%;
+  gap: 24px;
+  animation: aparecer 0.7s cubic-bezier(.4,0,.2,1) backwards;
+}
+
+@keyframes aparecer {
+  0% { opacity: 0; transform: scale(0.98) translateY(30px);}
+  100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+.titulo {
+  color: #28582c;
+  text-align: center;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
+
+.btnVisitantes {
+  background: linear-gradient(90deg,#72ef94 0%, #55d253 100%);
+  color: #244d28;
+  font-weight: 600;
+  font-size: 1.09rem;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 34px;
+  box-shadow: 0 2px 12px 0 rgba(50,90,60,0.09);
+  cursor: pointer;
+  transition: background 0.18s, color 0.13s, box-shadow 0.18s;
+  margin-top: 12px;
+}
+.btnVisitantes:hover {
+  background: #1acab7;
+  color: #fff;
+  box-shadow: 0 6px 18px 0 rgba(55,200,130,0.21);
+}
+
+@media (max-width: 480px) {
+  .formLogin {
+    min-width: 0;
+    max-width: 97vw;
+    padding: 14px 4vw;
+  }
+  .titulo {
+    font-size: 1.32rem;
+  }
+  .btnVisitantes {
+    font-size: 1rem;
+    padding: 11px 16px;
+  }
+}
