@@ -1,4 +1,4 @@
-import Logo from "../../assets/Logo_ifrj_horizontal.png";
+import Logo from "../../assets/logo_ifrj_horizontal.png";
 
 import "./style.css"
 
