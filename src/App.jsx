@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import Topo from "../src/Componentes/Topo/index"
 import Login from "../src/Componentes/Login/index"
-import Home from "../src/Componentes/Home/index"
-
 import './App.css'
+import UploadForm from './Componentes/Upload/uploadForm'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -11,8 +10,7 @@ function App() {
   return (
     <>
       <Topo />
-      <Home />
-      
+      <UploadForm />
     </>
   )
 }
