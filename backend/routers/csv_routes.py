@@ -11,7 +11,10 @@ async def upload_csv(file: UploadFile = File(...)):
         raise HTTPException(status_code=400, detail="Arquivo não é um CSV válido.")
 
     contents = await file.read()
-    csv_string = contents.decode('utf-8')
+    try:
+        csv_string = contents.decode('utf-8')
+    except UnicodeDecodeError:
+        csv_string = contents.decode('latin1') 
 
     try:
         csv_reader = csv.reader(StringIO(csv_string), delimiter=';')

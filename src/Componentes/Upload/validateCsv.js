@@ -6,7 +6,7 @@ export function validateCsvContent(csvText) {
     if (/e\+/i.test(field)) return false;
 
     //6 ou 11 dígitos
-    return soDigitos.length === 6 || soDigitos.length === 11;
+    return soDigitos.length === 6 || soDigitos.length === 11 || soDigitos.length === 7;
   }
 
   const lines = csvText.trim().split(/\r?\n/);
@@ -15,7 +15,7 @@ export function validateCsvContent(csvText) {
   }
 
   const headers = lines[0].split(";").map(h => h.trim().toLowerCase());
-  const expectedHeaders = ["nome", "siape/matricula"];
+  const expectedHeaders = ["nome", "siape_matricula"];
 
   if (
     headers.length !== expectedHeaders.length ||
